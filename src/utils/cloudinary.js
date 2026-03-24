@@ -15,6 +15,7 @@ const uploadOnCloudianry = async (localFilePath) => {
             resource_type: "auto"
         });
         // file has beem successifully uploaded 
+        fs.unlinkSync(localFilePath);
         return response;
 
     } catch (error) {
